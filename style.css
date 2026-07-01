@@ -1151,3 +1151,403 @@ body {
 .test-wrapper.completed .test-header h3 {
     color: #34a853;
 }
+
+
+/* ============================================
+   КРАСИВЫЕ КНОПКИ ЯЗЫКОВ
+   ============================================ */
+
+.lang-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: #ffffff;
+    border: 2px solid #e8ecf1;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a2e;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Эффект подсветки при наведении */
+.lang-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(74, 108, 247, 0.08), rgba(74, 108, 247, 0.02));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lang-btn:hover::before {
+    opacity: 1;
+}
+
+.lang-btn:hover {
+    border-color: #4a6cf7;
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 8px 30px rgba(74, 108, 247, 0.15);
+}
+
+.lang-btn:active {
+    transform: scale(0.97);
+    transition-duration: 0.1s;
+}
+
+/* Иконка */
+.lang-btn .lang-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4f8;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover .lang-icon {
+    background: #e8f0fe;
+}
+
+/* Название */
+.lang-btn .lang-name {
+    flex: 1;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1a1a2e;
+    transition: color 0.3s ease;
+}
+
+.lang-btn:hover .lang-name {
+    color: #4a6cf7;
+}
+
+/* Цветовые акценты для разных языков */
+.lang-btn.python:hover {
+    border-color: #4a6cf7;
+    box-shadow: 0 8px 30px rgba(74, 108, 247, 0.15);
+}
+
+.lang-btn.python .lang-icon {
+    background: #e8f0fe;
+}
+
+.lang-btn.cpp:hover {
+    border-color: #4a6cf7;
+    box-shadow: 0 8px 30px rgba(74, 108, 247, 0.15);
+}
+
+.lang-btn.cpp .lang-icon {
+    background: #e8f0fe;
+}
+
+.lang-btn.pascal:hover {
+    border-color: #4a6cf7;
+    box-shadow: 0 8px 30px rgba(74, 108, 247, 0.15);
+}
+
+.lang-btn.pascal .lang-icon {
+    background: #e8f0fe;
+}
+
+.lang-btn.js:hover {
+    border-color: #4a6cf7;
+    box-shadow: 0 8px 30px rgba(74, 108, 247, 0.15);
+}
+
+.lang-btn.js .lang-icon {
+    background: #e8f0fe;
+}
+
+/* Активная кнопка (если нужно) */
+.lang-btn.active {
+    border-color: #4a6cf7;
+    background: #f0f4ff;
+}
+
+.lang-btn.active .lang-icon {
+    background: #4a6cf7;
+    color: #ffffff;
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+
+@media (max-width: 480px) {
+    .lang-btn {
+        padding: 12px 16px;
+        border-radius: 14px;
+        font-size: 14px;
+    }
+
+    .lang-btn .lang-icon {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .lang-btn .lang-name {
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   ПУСТОЕ СОСТОЯНИЕ (когда тема не выбрана)
+   ============================================ */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state .empty-icon {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.empty-state h2 {
+    font-size: 28px;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    font-size: 18px;
+    color: #8899aa;
+}
+
+/* ============================================
+   СТИЛИ ДЛЯ СТАТЕЙ
+   ============================================ */
+
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+#container h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+#container > p:first-of-type {
+    font-size: 18px;
+    color: #8899aa;
+    margin-bottom: 30px;
+    border-left: 4px solid #4a6cf7;
+    padding-left: 16px;
+}
+
+#container hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #4a6cf7, #e8ecf1);
+    margin: 30px 0;
+    border-radius: 2px;
+}
+
+#container h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+#container h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2a2a4e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #445566;
+    margin-bottom: 16px;
+}
+
+#container p b {
+    color: #1a1a2e;
+}
+
+#container .quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #4a6cf7;
+    padding: 16px 24px;
+    background: #f0f4ff;
+    border-radius: 12px;
+    border-left: 4px solid #4a6cf7;
+    margin: 20px 0;
+}
+
+#container ul {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 20px 0;
+}
+
+#container ul li {
+    padding: 8px 12px 8px 36px;
+    background: #f7f9fc;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #445566;
+    position: relative;
+}
+
+#container ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 12px;
+    color: #4a6cf7;
+    font-weight: bold;
+}
+
+#container pre {
+    background: #1a1a2e;
+    color: #e0e0e0;
+    padding: 20px 24px;
+    border-radius: 14px;
+    overflow-x: auto;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 16px 0 20px 0;
+    border: 1px solid #2a2a4a;
+    position: relative;
+}
+
+#container pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #4a6cf7, #7b2ffc);
+    border-radius: 14px 14px 0 0;
+}
+
+#container .info-box {
+    background: #f7f9fc;
+    border-radius: 12px;
+    padding: 16px 20px;
+    border: 1px solid #e8ecf1;
+    margin: 16px 0;
+}
+
+#container .info-box p {
+    margin-bottom: 4px;
+    font-size: 15px;
+    color: #445566;
+}
+
+#container .info-box code {
+    background: #e8ecf1;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #1a1a2e;
+    font-family: 'Courier New', monospace;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    #container h1 {
+        font-size: 26px;
+    }
+
+    #container h2 {
+        font-size: 22px;
+    }
+
+    #container h3 {
+        font-size: 18px;
+    }
+
+    #container pre {
+        font-size: 13px;
+        padding: 16px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #container h1 {
+        font-size: 22px;
+    }
+
+    #container h2 {
+        font-size: 19px;
+    }
+
+    #container h3 {
+        font-size: 16px;
+    }
+
+    #container pre {
+        font-size: 12px;
+        padding: 12px 14px;
+    }
+
+    #container p {
+        font-size: 14px;
+    }
+
+    .empty-state .empty-icon {
+        font-size: 48px;
+    }
+
+    .empty-state h2 {
+        font-size: 22px;
+    }
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a6cf7;
+    background: #f0f4f8;
+    display: block;
+}
