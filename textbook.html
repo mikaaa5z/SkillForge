@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillForge — Учебник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Левая панель -->
+        <div class="profile-sidebar">
+            <!-- Аватар -->
+            <div class="avatar-wrapper">
+                <img id="avatarImage" class="avatar" src="" alt="Аватар">
+                <label for="avatarInput" class="avatar-upload-btn">
+                    <span>📷</span>
+                </label>
+                <input type="file" id="avatarInput" accept="image/*">
+            </div>
+
+            <!-- Имя пользователя -->
+            <h2 id="profileName">Имя</h2>
+
+            <!-- Кнопки языков -->
+            <div class="lang-buttons">
+                <button id="btn_python" class="lang-btn python">
+                    <span class="lang-icon">🐍</span>
+                    <span class="lang-name">Python</span>
+                </button>
+                <button id="btn_cpp" class="lang-btn cpp">
+                    <span class="lang-icon">⚙️</span>
+                    <span class="lang-name">C++</span>
+                </button>
+                <button id="btn_pascal" class="lang-btn pascal">
+                    <span class="lang-icon">📐</span>
+                    <span class="lang-name">Pascal</span>
+                </button>
+                <button id="btn_js" class="lang-btn js">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-name">JavaScript</span>
+                </button>
+            </div>
+
+            <!-- Кнопка выхода -->
+
+        </div>
+
+        <!-- Правая панель -->
+        <div class="profile-content">
+            <button class="back-link" onclick="window.location.href='profile.html'">← Назад</button>
+            <h1>📖 Учебник</h1>
+            <p>Выберите язык программирования</p>
+
+            <div id="container">
+                <div class="empty-state">
+                    <span class="empty-icon">📚</span>
+                    <h2>Выберите тему, чтобы начать изучение</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="texbook.js"></script>
+</body>
+</html>
