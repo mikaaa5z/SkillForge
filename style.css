@@ -1,0 +1,1153 @@
+/* ============================================
+   ОБЩИЕ СТИЛИ
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f0f4f8;
+    min-height: 100vh;
+}
+
+/* ============================================
+   СТАРТОВАЯ СТРАНИЦА (index.html)
+   ============================================ */
+
+.start-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.start-box {
+    background: #ffffff;
+    border-radius: 32px;
+    padding: 56px 48px 48px;
+    max-width: 440px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.start-box h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.start-box .subtitle {
+    font-size: 1rem;
+    color: #8899aa;
+    margin-bottom: 36px;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ============================================
+   КНОПКИ
+   ============================================ */
+
+.btn {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #4a6cf7;
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(74, 108, 247, 0.25);
+}
+
+.btn-primary:hover {
+    background: #3a5cd7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(74, 108, 247, 0.35);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #4a6cf7;
+    border: 2px solid #4a6cf7;
+}
+
+.btn-secondary:hover {
+    background: #f0f4ff;
+    transform: translateY(-2px);
+}
+
+.btn-full {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+}
+
+/* ============================================
+   ОКНА ВХОДА / РЕГИСТРАЦИИ
+   ============================================ */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-box {
+    background: #ffffff;
+    border-radius: 32px;
+    padding: 48px 40px 40px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.auth-box .back-link {
+    background: none;
+    border: none;
+    color: #8899aa;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 4px 0;
+    transition: color 0.2s;
+    position: absolute;
+    top: 20px;
+    left: 24px;
+}
+
+.auth-box .back-link:hover {
+    color: #4a6cf7;
+}
+
+.auth-box h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.auth-box .subtitle {
+    font-size: 0.95rem;
+    color: #8899aa;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/* ============================================
+   ПОЛЯ ВВОДА
+   ============================================ */
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 18px;
+    background: #f7f9fc;
+    border: 2px solid #e8ecf1;
+    border-radius: 14px;
+    font-size: 1rem;
+    color: #1a1a2e;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: inherit;
+}
+
+.input-group input:focus {
+    border-color: #4a6cf7;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(74, 108, 247, 0.08);
+}
+
+.input-group input::placeholder {
+    color: #b0c0d0;
+}
+
+/* ============================================
+   ПРОФИЛЬ (profile.html)
+   ============================================ */
+
+.profile-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background: #f0f4f8;
+}
+
+/* ----- ЛЕВАЯ ПАНЕЛЬ ----- */
+.profile-sidebar {
+    width: 280px;
+    background: #ffffff;
+    border-right: 1px solid #e8ecf1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+    flex-shrink: 0;
+}
+
+/* ----- АВАТАР ----- */
+.avatar-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a6cf7;
+    background: #f7f9fc;
+    display: block;
+}
+
+.avatar-upload-btn {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background: #4a6cf7;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    border: 2px solid #ffffff;
+}
+
+.avatar-upload-btn:hover {
+    background: #3a5cd7;
+}
+
+#avatarInput {
+    display: none;
+}
+
+/* ----- ИМЯ В ПРОФИЛЕ ----- */
+.profile-sidebar h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 24px;
+}
+
+/* ----- КНОПКА ВЫХОДА ----- */
+.btn-danger {
+    padding: 10px 32px;
+    background: transparent;
+    color: #ea4335;
+    border: 2px solid #ea4335;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-danger:hover {
+    background: #ea4335;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(234, 67, 53, 0.2);
+}
+
+/* ----- ПРАВАЯ ЧАСТЬ ----- */
+.profile-content {
+    flex: 1;
+    padding: 48px 56px;
+}
+
+.profile-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.profile-content > p {
+    color: #8899aa;
+    font-size: 1rem;
+    margin-bottom: 32px;
+}
+
+/* ----- КНОПКИ В ПРОФИЛЕ (Задачи / Учебник) ----- */
+.profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 32px 28px;
+    border-radius: 16px;
+    border: 2px solid #e8ecf1;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #1a1a2e;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(74, 108, 247, 0.05), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.info-card:hover::before {
+    opacity: 1;
+}
+
+.info-card .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #8899aa;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(74, 108, 247, 0.12);
+    border-color: #4a6cf7;
+}
+
+.info-card:hover h3 {
+    color: #4a6cf7;
+}
+
+.info-card:hover p {
+    color: #4a6cf7;
+}
+
+.info-card:active {
+    transform: scale(0.96);
+    transition-duration: 0.1s;
+}
+
+/* Анимация появления */
+.info-card {
+    animation: fadeSlideUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.info-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.info-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   ЗАДАЧИ (tasks.html)
+   ============================================ */
+
+/* Кнопка "Назад" */
+.back-link {
+    background: none;
+    border: none;
+    color: #4a6cf7;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 0;
+    margin-bottom: 16px;
+    font-family: inherit;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #3a5cd7;
+}
+
+/* Карточка задачи */
+.task-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+    border: 2px solid #e8ecf1;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 12px;
+    max-width: 800px;
+}
+
+.task-card:hover {
+    border-color: #4a6cf7;
+    transform: translateX(5px);
+}
+
+.task-card.completed {
+    border-color: #34a853;
+    background: #f0fdf4;
+}
+
+.task-card.completed .task-title {
+    color: #34a853;
+}
+
+.task-card input[type="checkbox"] {
+    transform: scale(1.5);
+    accent-color: #4a6cf7;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-card.completed input[type="checkbox"] {
+    accent-color: #34a853;
+}
+
+.task-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1a2e;
+    flex: 1;
+}
+
+.task-status {
+    font-size: 14px;
+    color: #8899aa;
+    background: #f0f4f8;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* ============================================
+   ТЕСТ ВНУТРИ ЗАДАЧ
+   ============================================ */
+
+.test-container {
+    display: none;
+    padding: 20px;
+    background: #f7f9fc;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #e8ecf1;
+    max-width: 800px;
+}
+
+.test-container.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.test-container .question {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+}
+
+.test-container .option {
+    display: block;
+    padding: 10px 14px;
+    margin: 6px 0;
+    background: white;
+    border: 2px solid #e8ecf1;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.test-container .option:hover {
+    border-color: #4a6cf7;
+    background: #f0f4ff;
+}
+
+.test-container .option input[type="radio"] {
+    margin-right: 12px;
+    accent-color: #4a6cf7;
+}
+
+.test-container .btn {
+    padding: 10px 24px;
+    background: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.test-container .btn:hover {
+    background: #3367d6;
+}
+
+.test-container .result {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    display: none;
+}
+
+.test-container .result.correct {
+    display: block;
+    background: #e8f5e9;
+    color: #34a853;
+}
+
+.test-container .result.wrong {
+    display: block;
+    background: #fce8e6;
+    color: #ea4335;
+}
+
+.test-container .result.warning {
+    display: block;
+    background: #fff3e0;
+    color: #fbbc04;
+}
+
+.test-container .correct-answer {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #e8f5e9;
+    border-radius: 6px;
+    color: #34a853;
+    font-weight: 500;
+    display: none;
+}
+
+.test-container .correct-answer.show {
+    display: block;
+}
+
+/* ============================================
+   УЧЕБНИК (topics.html)
+   ============================================ */
+
+.topic-card {
+    background: #ffffff;
+    padding: 20px 24px;
+    border-radius: 12px;
+    border: 2px solid #e8ecf1;
+    margin-bottom: 12px;
+    max-width: 800px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.topic-card:hover {
+    border-color: #4a6cf7;
+    transform: translateX(5px);
+}
+
+.topic-card h3 {
+    font-size: 18px;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+
+.topic-card p {
+    color: #8899aa;
+    font-size: 0.95rem;
+}
+
+.topic-card .badge {
+    display: inline-block;
+    background: #e8ecf1;
+    color: #4a6cf7;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 8px;
+}
+
+/* ============================================
+   ПОДСКАЗКА ДЛЯ ПАРОЛЯ
+   ============================================ */
+
+.password-hint {
+    font-size: 0.85rem;
+    color: #8899aa;
+    margin-top: -8px;
+    margin-bottom: 12px;
+    padding: 4px 0;
+    min-height: 24px;
+}
+
+.password-hint.valid {
+    color: #34a853;
+}
+
+.password-hint.invalid {
+    color: #ea4335;
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e8ecf1;
+        padding: 24px 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .profile-sidebar h2 {
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile-content {
+        padding: 30px 24px;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .start-box {
+        padding: 40px 28px 32px;
+    }
+
+    .auth-box {
+        padding: 40px 24px 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .start-box {
+        padding: 32px 20px 28px;
+    }
+
+    .auth-box {
+        padding: 32px 20px 28px;
+    }
+
+    .profile-sidebar {
+        padding: 20px 16px;
+    }
+
+    .avatar-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .avatar-upload-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .profile-content {
+        padding: 24px 16px;
+    }
+
+    .profile-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .task-card input[type="checkbox"] {
+        transform: scale(1.2);
+    }
+
+    .task-title {
+        font-size: 16px;
+    }
+
+    .test-container {
+        padding: 12px;
+    }
+}
+
+/* ============================================
+   ФИКС: КНОПКА ВСЕГДА ВНИЗУ
+   ============================================ */
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 500px; /* или больше */
+}
+
+.content-scroll {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.button-wrapper {
+    flex-shrink: 0;
+    padding-top: 20px;
+    border-top: 1px solid #e8ecf1;
+    margin-top: 20px;
+}
+
+.btn-start {
+    width: 100%;
+    padding: 18px 24px;
+    background: #ffffff;
+    color: #1a1a2e;
+    border: 2px solid #e8ecf1;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    display: block;
+}
+
+.btn-start:hover {
+    border-color: #4a6cf7;
+    background: #f0f4ff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74, 108, 247, 0.12);
+}
+
+.btn-start:active {
+    transform: scale(1);
+    background: #e8f0fe;
+}
+
+/* ============================================
+   СТИЛИ ДЛЯ ТЕСТА
+   ============================================ */
+
+/* Контейнер теста */
+.test-wrapper {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 30px 30px;
+    border: 2px solid #e8ecf1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Заголовок теста */
+.test-wrapper .test-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #f0f4f8;
+}
+
+.test-wrapper .test-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.test-wrapper .test-header .test-number {
+    font-size: 14px;
+    color: #8899aa;
+    background: #f0f4f8;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+/* Вопрос */
+.test-wrapper .question-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: #f7f9fc;
+    border-radius: 10px;
+    border-left: 4px solid #4a6cf7;
+}
+
+/* Варианты ответов */
+.test-wrapper .options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.test-wrapper .option {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f7f9fc;
+    border: 2px solid #e8ecf1;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-size: 16px;
+    color: #1a1a2e;
+}
+
+.test-wrapper .option:hover {
+    border-color: #4a6cf7;
+    background: #f0f4ff;
+    transform: translateX(4px);
+}
+
+.test-wrapper .option input[type="radio"] {
+    margin-right: 14px;
+    accent-color: #4a6cf7;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.test-wrapper .option .letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #e8ecf1;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 14px;
+    color: #556677;
+    margin-right: 12px;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+.test-wrapper .option:hover .letter {
+    background: #4a6cf7;
+    color: #ffffff;
+}
+
+/* Выбранный вариант */
+.test-wrapper .option.selected {
+    border-color: #4a6cf7;
+    background: #e8f0fe;
+}
+
+.test-wrapper .option.selected .letter {
+    background: #4a6cf7;
+    color: #ffffff;
+}
+
+/* Кнопка "Проверить" */
+.test-wrapper .btn-check {
+    padding: 12px 32px;
+    background: #4a6cf7;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 6px;
+    width: 100%;
+}
+
+.test-wrapper .btn-check:hover {
+    background: #3a5cd7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(74, 108, 247, 0.25);
+}
+
+.test-wrapper .btn-check:active {
+    transform: scale(0.97);
+}
+
+.test-wrapper .btn-check:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Результат */
+.test-wrapper .result {
+    margin-top: 14px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    display: none;
+}
+
+.test-wrapper .result.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.test-wrapper .result.correct {
+    background: #e8f5e9;
+    color: #34a853;
+    border: 1px solid #c8e6c9;
+}
+
+.test-wrapper .result.wrong {
+    background: #fce8e6;
+    color: #ea4335;
+    border: 1px solid #f5c6cb;
+}
+
+.test-wrapper .result.warning {
+    background: #fff3e0;
+    color: #fbbc04;
+    border: 1px solid #ffe0b2;
+}
+
+/* Правильный ответ (показывается при ошибке) */
+.test-wrapper .correct-answer {
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #e8f5e9;
+    border-radius: 8px;
+    color: #34a853;
+    font-weight: 500;
+    font-size: 15px;
+    display: none;
+    border: 1px solid #c8e6c9;
+}
+
+.test-wrapper .correct-answer.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* ============================================
+   АНИМАЦИЯ
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   АДАПТИВ
+   ============================================ */
+
+@media (max-width: 480px) {
+    .test-wrapper {
+        padding: 18px 16px 20px;
+    }
+
+    .test-wrapper .test-header h3 {
+        font-size: 17px;
+    }
+
+    .test-wrapper .question-text {
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+
+    .test-wrapper .option {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .test-wrapper .option .letter {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .test-wrapper .btn-check {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+    .test-wrapper .result {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+}
+
+/* ============================================
+   СТАТИСТИКА ПОД АВАТАРОМ
+   ============================================ */
+
+.stats-container {
+    width: 100%;
+    margin: 16px 0 20px 0;
+    padding: 16px 18px;
+    background: #f7f9fc;
+    border-radius: 14px;
+    border: 1px solid #e8ecf1;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #eef1f5;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #556677;
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 16px;
+    font-weight: 700;
+    color: #4a6cf7;
+    background: #e8f0fe;
+    padding: 2px 12px;
+    border-radius: 20px;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Цвета для разных показателей */
+.stat-item:nth-child(2) .stat-number {
+    color: #34a853;
+    background: #e8f5e9;
+}
+
+.stat-item:nth-child(3) .stat-number {
+    color: #fbbc04;
+    background: #fff3e0;
+}
+
+.stat-item:nth-child(4) .stat-number {
+    color: #ea4335;
+    background: #fce8e6;
+}
+
+.stat-item:nth-child(5) .stat-number {
+    color: #4a6cf7;
+    background: #e8f0fe;
+}
+
+
+/* Стиль для пройденного теста */
+.test-wrapper.completed {
+    border-color: #34a853;
+    background: #f0fdf4;
+}
+
+.test-wrapper.completed .test-header h3 {
+    color: #34a853;
+}
+
+.test-wrapper.completed {
+    border-color: #34a853;
+    background: #f0fdf4;
+}
+
+.test-wrapper.completed .test-header h3 {
+    color: #34a853;
+}

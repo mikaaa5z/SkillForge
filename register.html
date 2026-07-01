@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <button class="back-link" onclick="window.location.href='index.html'">← Назад</button>
+            <h1>🔐 Регистрация</h1>
+            <p class="subtitle">Создайте надёжный пароль</p>
+
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="registerNameInput" placeholder="Имя" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="registerPasswordInput" placeholder="Пароль" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="registerPasswordConfirmInput" placeholder="Повторите пароль" required>
+                </div>
+
+                <!-- Требования к паролю -->
+                <div id="passwordRequirements" class="password-requirements">
+                    <div class="requirement" data-rule="length">❌ Минимум 8 символов</div>
+                    <div class="requirement" data-rule="digit">❌ Хотя бы одна цифра (0-9)</div>
+                    <div class="requirement" data-rule="uppercase">❌ Хотя бы одна заглавная буква (A-Z)</div>
+                    <div class="requirement" data-rule="lowercase">❌ Хотя бы одна строчная буква (a-z)</div>
+                    <div class="requirement" data-rule="special">❌ Хотя бы один спецсимвол (!@#$%^&*)</div>
+                </div>
+
+                <div id="passwordHint" class="password-hint"></div>
+                <button type="submit" class="btn btn-primary btn-full" id="registerBtn">
+                    Зарегистрироваться
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

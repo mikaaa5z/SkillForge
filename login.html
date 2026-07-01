@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <button class="back-link" onclick="window.location.href='index.html'">← Назад</button>
+            <h1>Вход</h1>
+            <p class="subtitle">Введите ваши данные</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="loginNameInput" placeholder="Имя" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPasswordInput" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="loginBtn">
+                    Войти
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
